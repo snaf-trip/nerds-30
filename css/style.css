@@ -22,7 +22,34 @@
   font-style: normal;
 }
 
+:root {
+  --red-peace: #fb565a;
+  --red-hover: #e74246;
+  --red-click: #d7373b;
+  --green-peace: #00ca74;
+  --green-hover: #00bc6c;
+  --green-click: #00aa62;
+  --yellow-peace: #efc849;
+  --yellow-hover: #eab534;
+  --yellow-click: #e5a722;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* HEADER */
+
+.site-navigation-list {
+  list-style: none;
+}
 
 .site-navigation-item {
   list-style: none;
@@ -69,7 +96,7 @@
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
-  background: #fb565a;
+  background: var(--red-peace);
   text-transform: uppercase;
 }
 
@@ -77,6 +104,16 @@
 
 .services-list {
   list-style: none;
+
+  display: grid;
+
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 347px;
+  column-gap: 100px;
+}
+
+.services-item {
+  border: 2px greenyellow solid;
 }
 
 .services-item-title {
@@ -101,6 +138,11 @@
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.about-and-stat {
+  display: grid;
+  grid-template-columns: 651px 360px;
 }
 
 /* ABOUT US */
@@ -160,6 +202,20 @@
   color: #283136;
 }
 
+/* CLIENTS */
+
+.clients-list {
+  list-style: none;
+  display: grid;
+
+  grid-template-columns: 199px 209px 185px 173px;
+  column-gap: 95px;
+}
+
+.clients-items {
+  border: 2px rebeccapurple solid;
+}
+
 /* LOCATION */
 
 .contact-us-title {
@@ -192,7 +248,7 @@
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
-  background: #fb565a;
+  background: var(--red-peace);
   border-radius: 3px;
 }
 
@@ -306,7 +362,7 @@
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
-  background: #fb565a;
+  background: var(--red-peace);
   border-radius: 3px;
 }
 
