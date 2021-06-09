@@ -394,10 +394,10 @@ body {
 .clients-list {
   list-style: none;
   display: grid;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   padding: 0;
-  grid-template-columns: 199px 209px 185px 173px;
-  grid-column-gap: 95px;
+  grid-template-columns: 199px 128px 209px 108px 185px 120px 173px;
+  /* grid-column-gap: 95px; */
   margin: 46px 0 44px 0;
 }
 
@@ -407,7 +407,20 @@ body {
 }
 
 .client-item-html {
-  margin-right: 95px;
+  grid-column-start: 1;
+  padding-left: 32px;
+}
+
+.client-item-borodinski {
+  grid-column-start: 3;
+}
+
+.client-item-pink {
+  grid-column-start: 5;
+}
+
+.client-item-mishka {
+  grid-column-start: 7;
 }
 
 .client-item-html::after {
