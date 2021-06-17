@@ -15,138 +15,175 @@
 </head>
 
 <body class="page-body">
+
   <header class="main-header">
-    <nav class="main-navigation">
-      <a href="index.html" class="main-header-logo">
-        <img width="160" height="65" src="img/header-logo.svg" alt="Логотип нёрдс">
-      </a>
-      <ul class="site-navigation-list">
-        <li class="site-navigation-item"><a href="">студия</a></li>
-        <li class="site-navigation-item"><a href="">клиенты</a></li>
-        <li class="site-navigation-item"><a href="">магазин</a></li>
-        <li class="site-navigation-item"><a href="">контакты</a></li>
-      </ul>
-      <a class="cart-link" href="">корзина</a>
-    </nav>
-    <h3 class="main-header-title">Магазин готовых шаблонов</h3>
+    <div class="container">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img width="160" height="65" src="img/header-logo.svg" alt="Логотип нёрдс">
+        </a>
+        <ul class="site-navigation-list">
+          <li class="site-navigation-item"><a href="">студия</a></li>
+          <li class="site-navigation-item"><a href="">клиенты</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">магазин</a></li>
+          <li class="site-navigation-item"><a href="">контакты</a></li>
+        </ul>
+  
+        <a class="cart-link" href=""><span class="cart-img"></span>корзина</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
+  <main>
 
-    <section class="main-content">
-      <!-- main filters -->
-      <section class="filters">
-        <form action="#">
-          <fieldset>
-            <h3 class="filter-title">Соимость:</h3>
-            <input type="range">
-            <label for="ot" class="filter-price-txt">ОТ</label>
-            <input type="number" id="ot" placeholder="0">
-            <label for="do" class="filter-price-txt">ДО</label>
-            <input type="number" id="do" placeholder="15000">
-          </fieldset>
+    <section class="main-title">
+      <div class="container">
+        <p class="main-title-text">Магазин готовых шаблонов</p>
+      </div>
+    </section>
 
-          <fieldset>
-            <h3 class="filter-title">Сетка:</h3>
-            <input type="radio" id="adaptiv" name="grid">
-            <label for="adaptiv" class="filter-items">Адаптивная</label>
-            <input type="radio" id="fix" name="grid">
-            <label for="fix" class="filter-items">Фиксированная</label>
-            <input type="radio" id="eraser" name="grid">
-            <label for="eraser" class="filter-items">Резиновая</label>
-          </fieldset>
+    <div class="container">
+      <section class="main-content">
+        <!-- main filters -->
+        <section class="filters">
+          <form action="#">
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0" min="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000" >
+                </label>
+                </div>
+              </div>
+            </fieldset>
 
-          <fieldset>
-            <h3 class="filter-title" class="filter-items">Особенности:</h3>
-            <input type="checkbox" id="slider">
-            <label for="slider" class="filter-items">Слайдер</label>
-            <input type="checkbox" id="block">
-            <label for="block" class="filter-items">Блок преймуществ</label>
-            <input type="checkbox" id="news">
-            <label for="news" class="filter-items">Новости</label>
-            <input type="checkbox" id="gallery">
-            <label for="gallery" class="filter-items">Галерея</label>
-            <input type="checkbox" id="basket">
-            <label for="basket" class="filter-items">Корзина</label>
-          </fieldset>
+            <fieldset class="filter-item--grid">
+              <legend>Сетка:</legend>
+              <ul class="filter-item-list--grid">
+                <li class="item--grid">
+                  <input type="radio" id="adaptiv" name="grid" class="visually-hidden radio-input">
+                  <label for="adaptiv" class="filter-items">Адаптивная</label>
+                </li>
+                <li>
+                  <input type="radio" id="fix" name="grid" class="visually-hidden radio-input">
+                  <label for="fix" class="filter-items">Фиксированная</label>
+                </li>
+                <li>
+                  <input type="radio" id="eraser" name="grid" class="visually-hidden radio-input">
+                  <label for="eraser" class="filter-items">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
 
-          <a href="" class="filters-button">Показать</a>
-        </form>
-      </section>
+            <fieldset>
+              <h3 class="filter-title" class="filter-items">Особенности:</h3>
+              <input type="checkbox" id="slider">
+              <label for="slider" class="filter-items">Слайдер</label>
+              <input type="checkbox" id="block">
+              <label for="block" class="filter-items">Блок преймуществ</label>
+              <input type="checkbox" id="news">
+              <label for="news" class="filter-items">Новости</label>
+              <input type="checkbox" id="gallery">
+              <label for="gallery" class="filter-items">Галерея</label>
+              <input type="checkbox" id="basket">
+              <label for="basket" class="filter-items">Корзина</label>
+            </fieldset>
 
-
-      <section class="right-content">
-        <section class="sorting">
-            <h3 class="sorting-title">Сортировать:</h3>
-            <ul class="sorting-list">
-              <li class="sorting-item-active">По цене</li>
-              <li class="sorting-item">По типу</li>
-              <li class="sorting-item">По названию</li>
-              <li class="sorting-item"></li>
-              <li class="sorting-item"></li>
-            </ul>
+            <a href="" class="filters-button">Показать</a>
+          </form>
         </section>
 
 
-        <section>
-          <section class="cards">
-            <!-- карточка -->
-            <div>
-              <!-- шапочка карточки -->
-              <!-- <div>
-                <li></li>
-                <li></li>
-                <li></li>
-              </div> -->
-              <img src="img/site1.png" alt="Первый шаблон">
-              <!-- всплывающае окно карточки -->
-              <!-- <div>
-                <h3 class="card-title">sedona</h3>
-                <p class="card-description">Информационный сайт для туристов</p>
-                <a href="" class="card-button">9 900р</a>
-              </div> -->
-            </div>
-            <!-- карточка -->
-            <div>
-              <img src="img/site2.png" alt="Первый шаблон">
-            </div>
-            <!-- карточка -->
-            <div>
-              <img src="img/site3.png" alt="Первый шаблон">
-            </div>
-            <!-- карточка -->
-            <div>
-              <img src="img/site4.png" alt="Первый шаблон">
-            </div>
-            <!-- карточка -->
-            <div>
-              <img src="img/site5.png" alt="Первый шаблон">
-            </div>
-            <!-- карточка -->
-            <div>
-              <img src="img/site6.png" alt="Первый шаблон">
-            </div>
+        <section class="right-content">
+          <section class="sorting">
+              <h3 class="sorting-title">Сортировать:</h3>
+              <ul class="sorting-list">
+                <li class="sorting-item-active">По цене</li>
+                <li class="sorting-item">По типу</li>
+                <li class="sorting-item">По названию</li>
+                <li class="sorting-item"></li>
+                <li class="sorting-item"></li>
+              </ul>
           </section>
 
-          <ul class="pages-list">
-            <li class="pages-item-active"><a href="">1</a></li>
-            <li class="pages-item"><a href="">2</a></li>
-            <li class="pages-item"><a href="">3</a></li>
-            <li class="pages-item"><a href="">Следующая</a></li>
-          </ul>
+
+          <section>
+            <section class="cards">
+              <!-- карточка -->
+              <div>
+                <!-- шапочка карточки -->
+                <!-- <div>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </div> -->
+                <img src="img/site1.png" alt="Первый шаблон">
+                <!-- всплывающае окно карточки -->
+                <!-- <div>
+                  <h3 class="card-title">sedona</h3>
+                  <p class="card-description">Информационный сайт для туристов</p>
+                  <a href="" class="card-button">9 900р</a>
+                </div> -->
+              </div>
+              <!-- карточка -->
+              <div>
+                <img src="img/site2.png" alt="Первый шаблон">
+              </div>
+              <!-- карточка -->
+              <div>
+                <img src="img/site3.png" alt="Первый шаблон">
+              </div>
+              <!-- карточка -->
+              <div>
+                <img src="img/site4.png" alt="Первый шаблон">
+              </div>
+              <!-- карточка -->
+              <div>
+                <img src="img/site5.png" alt="Первый шаблон">
+              </div>
+              <!-- карточка -->
+              <div>
+                <img src="img/site6.png" alt="Первый шаблон">
+              </div>
+            </section>
+
+            <ul class="pages-list">
+              <li class="pages-item-active"><a href="">1</a></li>
+              <li class="pages-item"><a href="">2</a></li>
+              <li class="pages-item"><a href="">3</a></li>
+              <li class="pages-item"><a href="">Следующая</a></li>
+            </ul>
+          </section>
         </section>
       </section>
-    </section>
-    
+    </div>
+
     <section class="location">
     
-      <img src="img/map.png" alt="Карта">
+      <img src="img/map.png" class="map-img" width="1440" height="416" alt="Карта">
     
       <div class="contact-us">
-        <h3 class="contact-us-title">NЁRDS DESIGN STUDIO</h3>
-        <p class="contact-us-location">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78122757575" class="telephone-number">тел. +7 (812) 275-75-75</a>
-        <a href="" class="contact-us-button">Напишите нам</a>
+        <ul class="contact-us-list">
+          <li class="contact-us-item">
+            <h3 class="contact-us-title">NЁRDS DESIGN STUDIO</h3>
+          </li>
+          <li class="contact-us-item">
+            <p class="contact-us-location">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+          </li>
+          <li class="contact-us-item"><a href="tel:+78122757575" class="telephone-number">тел. +7 (812) 275-75-75</a></li>
+          <li class="contact-us-item"><a href="" class="contact-us-button">Напишите нам</a></li>
+        </ul>
       </div>
     
     </section>
@@ -154,9 +191,15 @@
     
     <footer class="main-footer">
       <ul class="footer-list">
-        <li class="footer-item"><img width="26" height="15" src="img/vk-icon.svg" alt="vk"></li>
-        <li class="footer-item"><img width="12" height="22" src="img/fb-icon.svg" alt="facebook"></li>
-        <li class="footer-item"><img width="21" height="21" src="img/insta-icon.svg" alt="instagram"></li>
+        <a href="" class="footer-item">
+          <li><img width="26" height="15" src="img/vk-icon.svg" alt="vk"></li>
+        </a>
+        <a href="" class="footer-item">
+          <li><img width="12" height="22" src="img/fb-icon.svg" alt="facebook"></li>
+        </a>
+        <a href="" class="footer-item">
+          <li><img width="21" height="21" src="img/insta-icon.svg" alt="instagram"></li>
+        </a>
       </ul>
       <div class="footer-text">
         <h3 class="footer-title">Давайте дружить, это выгодно!</h3>
