@@ -34,6 +34,12 @@
   --yellow-click: #e5a722;
 
   --silver: #e1e1e1;
+
+  --silver-peace: #eeeeee;
+  --silver-hover: #dfdfdf;
+  --silver-click: #d5d5d5;
+
+  --black: #000000;
 }
 
 *,
@@ -89,7 +95,7 @@ input[type="number"]:focus {
   margin-right: 200px;
   background-image: url(../img/header-logo.svg);
   width: 160px;
-  height: 65px;
+  height: 66px;
 }
 
 .main-header-logo:hover {
@@ -105,7 +111,7 @@ input[type="number"]:focus {
   display: flex;
   text-align: center;
   align-items: center;
-  margin: 26px 205px auto 0;
+  margin: 26px 200px auto 7px;
   padding: 0;
 }
 
@@ -117,7 +123,7 @@ input[type="number"]:focus {
 .site-navigation-item a {
   list-style: none;
   font-family: "roboto medium";
-  color: #000000;
+  color: var(--black);
   line-height: 30px;
   font-size: 16px;
   text-decoration: none;
@@ -129,7 +135,7 @@ input[type="number"]:focus {
 }
 
 .site-navigation-item a:active {
-  color: #000000;
+  color: var(--black);
   opacity: 0.3;
 }
 
@@ -142,12 +148,12 @@ input[type="number"]:focus {
   display: block;
   width: 15px;
   height: 15px;
-  margin-right: 25px;
+  margin-right: 26px;
 }
 
 .cart-link {
   font-family: "roboto medium";
-  color: #000000;
+  color: var(--black);
   line-height: 30px;
   font-size: 16px;
   text-decoration: none;
@@ -162,7 +168,7 @@ input[type="number"]:focus {
 }
 
 .cart-link:active {
-  color: #000000;
+  color: var(--black);
   opacity: 0.3;
 }
 
@@ -193,7 +199,7 @@ input[type="number"]:focus {
   font-weight: 500;
   line-height: 55px;
   margin: 0 0 29px 0;
-  color: #000000;
+  color: var(--black);
 }
 
 .slide-description {
@@ -201,7 +207,7 @@ input[type="number"]:focus {
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 40px 0;
-  color: #000000;
+  color: var(--black);
   max-width: 400px;
 }
 
@@ -277,9 +283,9 @@ input[type="number"]:focus {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  color: #000000;
+  color: var(--black);
   text-transform: uppercase;
-  margin: 25px 0 16px 0;
+  margin: 20px 0 16px 0;
 }
 
 .services-item-description {
@@ -377,8 +383,8 @@ input[type="number"]:focus {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
-  color: #000000;
-  margin: 38px 0 32px 0;
+  color: var(--black);
+  margin: 35px 0 32px 0;
 }
 
 .about-us-small-description {
@@ -396,7 +402,7 @@ input[type="number"]:focus {
   line-height: 24px;
   font-weight: bold;
   color: #283136;
-  margin: 0 0 23px 0;
+  margin: 0 0 22px 0;
 }
 
 .about-us-list {
@@ -424,7 +430,7 @@ input[type="number"]:focus {
 }
 
 .happy-logo {
-  margin: 0 0 37px 0;
+  margin: 0 0 30px 0;
 }
 
 .our-statistics-title-list {
@@ -433,7 +439,7 @@ input[type="number"]:focus {
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
-  color: #000000;
+  color: var(--black);
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
@@ -455,7 +461,7 @@ input[type="number"]:focus {
   line-height: 64px;
   font-weight: bold;
   margin-right: 24px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 10px;
 }
 
@@ -555,7 +561,7 @@ input[type="number"]:focus {
 }
 
 .contact-us {
-  padding-top: 50px;
+  padding-top: 40px;
   box-sizing: border-box;
   width: fit-content;
   min-width: 320px;
@@ -572,7 +578,7 @@ input[type="number"]:focus {
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--black);
   margin: 0 0 23px 0;
 }
 
@@ -626,7 +632,7 @@ input[type="number"]:focus {
 .main-footer {
   display: flex;
   align-items: center;
-  margin-top: 58px;
+  margin-top: 50px;
   margin-left: 149px;
   margin-bottom: 68px;
 }
@@ -645,7 +651,7 @@ input[type="number"]:focus {
   font-family: "roboto bold";
   font-size: 36px;
   line-height: 36px;
-  color: #000000;
+  color: var(--black);
   margin: 0;
 }
 
@@ -701,9 +707,10 @@ input[type="number"]:focus {
   font-family: "roboto medium";
   font-size: 55px;
   line-height: 55px;
-  color: #000000;
+  color: var(--black);
   display: flex;
   justify-content: center;
+  margin: 58px 0 52px;
 }
 
 .filter-item {
@@ -798,6 +805,7 @@ input[type="number"]:focus {
   padding: 0;
   border: none;
   min-width: 208px;
+  height: 148px;
 }
 
 .filter-item--grid legend {
@@ -841,12 +849,19 @@ input[type="number"]:focus {
   position: relative;
 }
 
+/* filter features */
+
+.filter-item--features {
+  margin-top: 30px;
+  height: 227px;
+}
+
 .filter-title {
   font-family: "roboto bold";
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
 }
 
 .filter-price-txt {
@@ -867,13 +882,40 @@ input[type="number"]:focus {
 
 .filters-button {
   font-family: "roboto medium";
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  color: #000000;
-  text-transform: uppercase;
-  background: #eeeeee;
-  border-radius: 3px;
+  color: var(--black);
   text-decoration: none;
+  background: var(--silver-peace);
+  display: flex;
+  border-radius: 3px;
+  width: fit-content;
+  min-width: 260px;
+  min-height: 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.filters-button span {
+  font-family: "roboto medium";
+  cursor: pointer;
+}
+
+.filters-button:hover {
+  background-color: var(--silver-hover);
+}
+
+.filters-button:active {
+  background-color: var(--silver-click);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.filters-button:active span {
+  opacity: 0.3;
 }
 
 .sorting-title {
@@ -881,19 +923,15 @@ input[type="number"]:focus {
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
+  margin: 0;
+  margin-right: 270px;
 }
 
 .sorting-list {
   list-style: none;
-}
-
-.sorting-item-active {
-  font-family: "roboto";
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
-  color: #000000;
+  padding: 0;
+  margin: 0;
 }
 
 .sorting-item {
@@ -901,8 +939,56 @@ input[type="number"]:focus {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
-  color: #000000;
+  color: var(--black);
   opacity: 0.3;
+  cursor: pointer;
+}
+
+.sorting-item:nth-child(1) {
+  margin-right: 20px;
+}
+
+.sorting-item:nth-child(2) {
+  margin-right: 25px;
+}
+
+.sorting-item:nth-child(3) {
+  margin-right: 48px;
+}
+
+.sorting-item-arrow {
+  margin-right: 18px;
+}
+
+.sorting-list li:last-child {
+  margin: 0;
+}
+
+.sorting-item-active {
+  font-family: "roboto";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--black);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.sorting-arrow-down {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background-image: url(/img/arrow-down-active.svg);
+  opacity: 1;
+}
+
+.sorting-arrow-up {
+  display: block;
+  margin-top: auto;
+  width: 11px;
+  height: 10px;
+  background-image: url(/img/arrow-up-active.svg);
+  opacity: 0.2;
 }
 
 .card-title {
@@ -910,7 +996,7 @@ input[type="number"]:focus {
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: var(--black);
 }
 
 .card-description {
@@ -937,11 +1023,22 @@ input[type="number"]:focus {
 
 .pages-item-active a {
   font-family: "roboto medium";
-  color: #000000;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  color: var(--black);
   text-decoration: none;
-  background: #ffffff;
+  display: flex;
+  border-radius: 3px;
+  width: fit-content;
+  min-width: 50px;
+  min-height: 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 48px;
+  cursor: pointer;
+  background-color: #ffffff;
   border: 3px solid #dbdbdb;
   box-sizing: border-box;
   border-radius: 3px;
@@ -949,14 +1046,42 @@ input[type="number"]:focus {
 
 .pages-item a {
   font-family: "roboto medium";
-  color: #000000;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  color: var(--black);
   text-decoration: none;
-  background: #eeeeee;
-  border: 3px solid #dbdbdb;
-  box-sizing: border-box;
+  background-color: var(--silver-peace);
+  display: flex;
   border-radius: 3px;
+  width: fit-content;
+  min-width: 50px;
+  min-height: 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.pages-item:last-child a {
+  font-family: "roboto medium";
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--black);
+  text-decoration: none;
+  background-color: var(--silver-peace);
+  display: flex;
+  border-radius: 3px;
+  width: fit-content;
+  min-width: 260px;
+  min-height: 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 48px;
+  cursor: pointer;
 }
 
 .main-content {
@@ -965,6 +1090,7 @@ input[type="number"]:focus {
 
 .sorting {
   display: flex;
+  align-items: center;
 }
 
 .sorting-list {
@@ -973,6 +1099,11 @@ input[type="number"]:focus {
 
 .pages-list {
   display: flex;
+  padding: 0;
+}
+
+.pages-elem {
+  margin-right: 11px;
 }
 
 .cards {
