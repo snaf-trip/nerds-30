@@ -151,6 +151,40 @@
         </ul>
       </div>
 
+
+      <div class="modal-form hide">
+        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="modal-top">
+            <h3 class="modal-title">Напишите нам</h3>
+            <span class="closed-modal"></span>
+          </div>
+          <div class="modal_input_top">
+            <div class="appointment_item">
+              <p class="p-label-form">
+                <label for="name" class="label-form">Ваше имя:</label>
+              </p>
+              <input class="form-input appointment_name" id="name" type="text" name="name-surename" placeholder="Имя Фамилия">
+            </div>
+      
+            <div class="appointment_item appointment_item_two">
+              <p class="p-label-form">
+                <label for="email" class="label-form">Ваш email:</label>
+              </p>
+              <input class="form-input appointment_email" id="email" type="email" name="email"
+                placeholder="email@example.com">
+            </div>
+          </div>
+          <div class="appointment_item modal_input_area">
+            <p class="p-label-text">
+              <label for="text" class="label-form">Текст письма:</label>
+            </p>
+            <textarea class="form-input modal_textarea" rows="4" cols="94" name="textarea" id="text"
+              placeholder="В свободной форме"></textarea>
+          </div>
+          <button class="form-btn btn-submit" type="submit">отправить</button>
+        </form>
+      </div>
+
     </section>
   </main>
 
