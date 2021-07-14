@@ -48,6 +48,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.btn {
+  cursor: pointer;
+}
+
 /* Убирает стрелочки в input type=number... */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
